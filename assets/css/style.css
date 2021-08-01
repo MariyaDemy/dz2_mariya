@@ -29,45 +29,165 @@ html {
     z-index: 1;
 }
 
-.header-row {
-
+.header-row,
+.aside-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    
+}
+
+.nav-item {
+    margin: 0 20px;
+}
+
+
+
+.nav-link {
+    font-family: 'Gelasio';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#081F32;
+
+}
+
+.book {
+    padding: 15px 30px ;
+    text-decoration: none;
+    display: inline-block;
+    background: #1B75BB;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Gelasio';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    width: 13.4rem;
+    height: 5.4rem;
+}
+
+.aside-row {
+    max-width: 687px;
+    max-height: 110px;
+    padding: 20px 50px;
+    background-color: rgba(225, 255, 255, 0.21);
+    backdrop-filter: blur(70px);
+    border-radius: 10px;
+    position:relative;
+    top: -200px;
+    
+}
+
+h3 {
+    font-family: 'Roboto';
+    font-size: 16px;   
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+}
+
+.aside-text {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    color: rgba(8, 31, 50, 0.6);
+    padding-top: 1rem;    
+}
+
+.aside-block:before {
+    
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 170px;
+    bottom: 40px;
+    width: 22%;
+    border: 2px solid #9DACB8;
+    border-top: none;
+    border-bottom: none;
+    z-index: 1;
+
+}
+
+button {
+    width: 13.8rem;
+    height: 5.4rem;
+    background-color:#1B75BB;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    color: #fff;
+    border: 0;
+}
+
+button > a {
+    color: #fff;
+}
+
+.aside-button {
+    width: 111px;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+.section-subtitle {
+font-family: Roboto;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: 0.1em;
+text-align: left;
+
+}
+
 /* FIRST SECTION */
 .first-section {
-    background-image: url("../imgs/main-bg.jpg");
+    background-image: url("../images/main-bg.jpg");
     min-height: 690px;
     padding: 22rem 0 0;
+    margin-bottom: 15rem;
+    
 }
 
 .first-section-title {
     font-size: 5.7rem;
-    max-width: 45rem;
+    max-width: 45.6rem;
     margin: 0 0 2rem;
+    
 }
 
 .first-section-text {
     font-size: 1.8rem;
-    max-width: 34rem;
-}
+    max-width: 34.7rem;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    padding-bottom: 3rem;
+    color: rgba(8, 31, 50, 0.6);
 
-@media screen and (max-width: 767px) {
-
-    .first-section-title {
-        font-size: 4.7rem;
-    }
-
-}
-
-@media screen and (max-width: 425px) {
-
-    .first-section-title {
-        font-size: 2.7rem;
-    }
 
 }
-
 
 /* HOLIAYS */
 .holidays {}
@@ -89,16 +209,124 @@ html {
 
 .holidays-img-sec {
     position: absolute;
-    top: -50px;
-    right: -60px;
+    top: -43px;
+    right: -50px;
 }
 
 .holidays-img-ripples {
     position: absolute;
     left: -30px;
-    bottom: -30px;
+    bottom: -50px;
 }
 
-.holidays-content {}
+h2 {
+    font-family: 'Gelasio';
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 45px;
+    letter-spacing: 0em;    
+}
 
-.holidays-title {}
+.button-holidays {
+    width: 6.9rem;
+    height: 5.6rem;
+}
+.holidays-content {
+    max-width: 43rem;
+}
+
+section-subtitle {
+    padding-bottom: 1.5rem;
+}
+.holidays-title {
+    padding-bottom: 3rem;
+}
+
+.highlight {
+    color: #1B75BB;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    
+}
+
+@media screen and (max-width: 776px) {
+
+    .first-section-title {
+        font-size: 4.7rem;
+    }
+    .holidays-img-main,
+    .holidays-img-sec,
+    .holidays-img-ripples {
+        max-width: 40rem;
+    }
+    .section-subtitle {
+        font-size: 1.5rem;
+    }
+    .holidays-title {
+        font-size: 2.4rem;
+    }
+    .holidays-content {
+        max-width: 25rem;
+    }
+
+}
+
+@media screen and (max-width: 425px)  {
+
+    .first-section-title {
+        font-size: 2.7rem;
+    }
+    .holidays-img-main,
+    .holidays-img-sec {
+        max-width: 25rem;
+    }
+
+    .holidays-img-ripples {
+        max-width:10rem;
+    }
+
+    .logo {
+        width:10rem;
+    }
+
+    .aside-row {
+        padding: 5px 5px;
+    }
+
+    .nav-item {
+        margin: 0 5px;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+    }
+
+    button {
+        max-width: 8.8rem;
+        max-height: 3.4rem;
+        font-size: 12px;
+    }
+    
+    .book {
+        max-width: 9.5rem;
+        max-height: 3.4rem;
+        font-size: 12px;
+        padding: 1px 1px;
+        
+    }
+
+    .first-section {
+        padding: 10rem 0 0;
+    }
+
+    .aside-row {
+        position: relative;
+        top:-480px;
+    }
+}
