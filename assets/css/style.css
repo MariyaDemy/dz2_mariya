@@ -21,6 +21,8 @@ html {
     padding: 0 15px;
 }
 
+/* header  */
+
 .header {
     position: absolute;
     top: 0;
@@ -29,28 +31,39 @@ html {
     z-index: 1;
 }
 
-.header-row,
-.aside-row {
+.header__row,
+.checkin__row {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-
-
-.nav-list {
+.nav__list {
     list-style: none;
     display: flex;
     
 }
 
-.nav-item {
+.nav__item {
     margin: 0 20px;
 }
 
+.logo {
+    animation: move 5s infinite;
+}
+/* @keyframes move {
+    0% {transform: rotateY(0);}
+    50% {transform: rotateY(45deg);}
+    100% {transform: rotateY(0deg);}
+} */
 
+@keyframes move {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.2,1.2);}
+    100% {transform: scale(1);}
+}
 
-.nav-link {
+.nav__link {
     font-family: 'Gelasio';
     font-size: 16px;
     font-style: normal;
@@ -59,7 +72,17 @@ html {
     letter-spacing: 0em;
     text-align: left;
     color:#081F32;
+}
 
+.nav__link:hover {
+    color:#6642f5;
+}
+
+.nav__link--active,
+.first-section__title--active,
+.first-section__subtitle--active,
+.holidays__subtitle--active {
+    color: #1B75BB;
 }
 
 .book {
@@ -78,9 +101,14 @@ html {
     height: 5.4rem;
 }
 
-.aside-row {
+.book:hover {
+    color:#e9e6f2;
+}
+
+/* checkin */
+
+.checkin__row {
     max-width: 687px;
-    max-height: 110px;
     padding: 20px 50px;
     background-color: rgba(225, 255, 255, 0.21);
     backdrop-filter: blur(70px);
@@ -90,7 +118,7 @@ html {
     
 }
 
-h3 {
+.checkin__title {
     font-family: 'Roboto';
     font-size: 16px;   
     font-weight: 500;
@@ -98,17 +126,17 @@ h3 {
     letter-spacing: 0em;
 }
 
-.aside-text {
+.checkin__text {
     font-family: 'Roboto';
     font-size: 16px;
     font-weight: 500;
     line-height: 26px;
     letter-spacing: 0em;
     color: rgba(8, 31, 50, 0.6);
-    padding-top: 1rem;    
+    margin-top: 1rem;    
 }
 
-.aside-block:before {
+.checkin__block:before {
     
     content: "";
     position: absolute;
@@ -123,7 +151,9 @@ h3 {
 
 }
 
-button {
+.first-section__link,
+.checkin__link,
+.holidays__link {
     width: 13.8rem;
     height: 5.4rem;
     background-color:#1B75BB;
@@ -138,18 +168,34 @@ button {
     border: 0;
 }
 
-button > a {
-    color: #fff;
+.checkin__link:hover {
+    color:#e9e6f2;
 }
 
-.aside-button {
+.checkin__button {
     width: 111px;
 }
 .uppercase {
     text-transform: uppercase;
+
+}
+/* first-section */
+
+.first-section {
+    background-image: url("../images/main-bg.jpg");
+    background-size: cover;
+    min-height: 690px;
+    padding: 22rem 0 0;
+    margin-bottom: 15rem;    
 }
 
-.section-subtitle {
+.first-section__title {
+    font-size: 5.7rem;
+    max-width: 45.6rem;
+    margin: 0 0 2rem;    
+}
+
+.first-section__subtitle {
 font-family: Roboto;
 font-size: 20px;
 font-style: normal;
@@ -157,93 +203,79 @@ font-weight: 500;
 line-height: 30px;
 letter-spacing: 0.1em;
 text-align: left;
-
 }
 
-/* FIRST SECTION */
-.first-section {
-    background-image: url("../images/main-bg.jpg");
-    min-height: 690px;
-    padding: 22rem 0 0;
-    margin-bottom: 15rem;
-    
-}
-
-.first-section-title {
-    font-size: 5.7rem;
-    max-width: 45.6rem;
-    margin: 0 0 2rem;
-    
-}
-
-.first-section-text {
+.first-section__text {
     font-size: 1.8rem;
     max-width: 34.7rem;
     font-family: Roboto;
     font-weight: 400;
     line-height: 29px;
     letter-spacing: 0em;
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
     color: rgba(8, 31, 50, 0.6);
-
-
 }
 
-/* HOLIAYS */
+.first-section__link:hover {
+    color:#e9e6f2;
+}
+
+/* holidays */
 .holidays {}
 
-.holidays-row {
+.holidays__row {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.holidays-imgs {
+.holidays__imgs {
     position: relative;
 }
 
-.holidays-img-main {
+.holidays__img--main {
     position: relative;
     z-index: 1;
 }
 
-.holidays-img-sec {
+.holidays__img--sec {
     position: absolute;
     top: -43px;
     right: -50px;
 }
 
-.holidays-img-ripples {
+.holidays__img--ripples {
     position: absolute;
     left: -30px;
     bottom: -50px;
 }
 
-h2 {
+.holidays__button {
+    width: 6.9rem;
+    height: 5.6rem;
+}
+.holidays__content {
+    max-width: 43rem;
+}
+
+.holidays__subtitle {
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 150%;
+    letter-spacing: 0.1em;
+}
+.holidays__title {
     font-family: 'Gelasio';
     font-size: 32px;
     font-weight: 500;
     line-height: 45px;
-    letter-spacing: 0em;    
+    letter-spacing: 0em;
+    margin-bottom: 3rem;
 }
 
-.button-holidays {
-    width: 6.9rem;
-    height: 5.6rem;
-}
-.holidays-content {
-    max-width: 43rem;
-}
-
-section-subtitle {
-    padding-bottom: 1.5rem;
-}
-.holidays-title {
-    padding-bottom: 3rem;
-}
-
-.highlight {
-    color: #1B75BB;
+.holidays__link:hover {
+    color:#e9e6f2;
 }
 
 a {
